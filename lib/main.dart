@@ -1,6 +1,15 @@
+import 'package:ai_assisstant/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
 
+// Future<void> main() async {
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+  // await SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.portraitDown,
+  // ]);
   runApp(const MyApp());
 }
 
@@ -11,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Center(child: Text("Hello"))),
+      home: SplashScreen(),
     );
   }
 }
