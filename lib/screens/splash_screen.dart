@@ -2,6 +2,7 @@ import 'package:ai_assisstant/helper/pref.dart';
 import 'package:ai_assisstant/screens/home_screen.dart';
 import 'package:ai_assisstant/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../helper/global.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -17,12 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
     // TODO: implement initState
     super.initState();
     Future.delayed(Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder:
-              (_) =>
-                  Pref.showOnboarding ? const OnboardingScreen() : HomeScreen(),
-        ),
+      Get.off(
+        () => Pref.showOnboarding ? const OnboardingScreen() : HomeScreen(),
       );
     });
   }

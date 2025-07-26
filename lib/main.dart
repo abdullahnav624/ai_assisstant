@@ -1,6 +1,8 @@
+import 'package:ai_assisstant/helper/global.dart';
 import 'package:ai_assisstant/helper/pref.dart';
 import 'package:ai_assisstant/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 // Future<void> main() async {
 void main() async {
@@ -19,7 +21,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
+      title: appName,
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
     );
